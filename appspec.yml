@@ -1,1 +1,12 @@
-
+version: 0.0
+os: linux
+files:
+  - source: /var/www/httpd
+    destination: /opt/tomcat/webapps/
+hooks:
+  Before Install:
+    - location: stop.sh
+      timeout: 300
+  After Install:
+    - location: start.sh
+      timeout: 300	
