@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /var/www/httpd
-    destination: /opt/tomcat/webapps/
+  - source: index.html
+    destination: /var/www/html
 hooks:
   Before Install:
     - location: stop.sh
